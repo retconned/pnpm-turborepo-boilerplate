@@ -1,0 +1,21 @@
+{
+  "name": "@retconned/eslint-config-custom",
+  "version": "0.0.0",
+  "description": "Eslint configurations shared between all apps adn packages",
+  "author": "retconned <retcnned@gmail.com>",
+  "keywords": [
+    "eslint"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "eslint-config-next": "13.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-config-turbo": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

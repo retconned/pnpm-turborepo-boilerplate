@@ -1,0 +1,39 @@
+{
+  "name": "turborepo-base",
+  "version": "0.1.0",
+  "private": true,
+  "author": "retconned <retcnned@gmail.com>",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build --cache-dir=\"./.turbo_cache\"",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "deploy": "turbo run deploy",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "lint:staged": "lint-staged",
+    "db:generate": "pnpm --filter @retconned/database prisma generate",
+    "db:push": "turbo db:generate db:push",
+    "check:prettier:staged": "pretty-quick --staged",
+    "check:commit:msg:staged": "commitlint --edit \"$1\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@retconned/config": "workspace:*",
+    "@retconned/eslint-config-custom": "workspace:*",
+    "@types/node": "^17.0.12",
+    "dotenv": "^16.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "pretty-quick": "^3.1.3",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18.14.0"
+  },
+  "packageManager": "pnpm@7.28.0"
+}

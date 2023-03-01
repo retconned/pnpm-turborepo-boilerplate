@@ -1,0 +1,18 @@
+{
+  "name": "@retconned/tsconfig",
+  "version": "0.0.0",
+  "description": "Typescript configurations shared between all workspaces",
+  "author": "retconned <retcnned@gmail.com>",
+  "keywords": [
+    "config",
+    "configuration"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "dist/**"]
+    },
+    "lint": {
+      "inputs": [
+        "**/*.tsx",
+        "**/*.ts",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.md",
+        "**/*.json",
+        "test/**/*.ts",
+        "test/**/*.tsx"
+      ]
+    },
+    "test": {
+      "dependsOn": ["lint", "^build"],
+      "inputs": ["**/*.tsx", "**/*.ts", "test/**/*.ts", "test/**/*.tsx"],
+      "outputs": []
+    },
+    "clean": {
+      "dependsOn": ["^clean"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "deploy": {
+      "dependsOn": ["build", "test", "lint"]
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    }
+  },
+  "globalEnv": ["NODE_ENV", "PORT", "VERCEL_URL"]
+}
