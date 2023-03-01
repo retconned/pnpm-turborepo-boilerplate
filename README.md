@@ -6,14 +6,15 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 
 > ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app.
+- `web`: a [Next.js](https://nextjs.org/) app.
 - `my-t3`: a [T3 Stack](https://nextjs.org/) app.
 - `ui`: a stub React component library shared throughout the monorepo.
+- `utils`: shared utils throughout the monorepo.
+- `database`: Prisma instence / client used throughout the monorepo.
 - `eslint-config-custom`: `eslint` .
-- `tsconfig`: `tsconfig.json`'s used throughout the monorepo
-- `prisma`: Next-generation Node.js and TypeScript ORM used throughout the monorepo.
+- `tsconfig`: `tsconfig.json`'s used throughout the monorepo.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package & app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 > ### Utilities
 
@@ -33,22 +34,4 @@ For git integration it has also:
 > ### Prerequisites
 
 - pnpm
-- node >=18.0.0
-
-> ### Install
-
-```sh
-pnpm i
-```
-
-> ### Usage
-
-```sh
-pnpm run dev
-```
-
-> ### Run tests
-
-```sh
-pnpm run test
-```
+- node >=18.4.0
