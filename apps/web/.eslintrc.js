@@ -1,3 +1,4 @@
 module.exports = {
-  extends: ['@retconned/eslint-config-custom']
+  root: true,
+  extends: ["@retconned/eslint-config-custom"],
 }
