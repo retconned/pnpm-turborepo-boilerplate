@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to turborepo-template 👋</h1>
+<h1 align="center">Welcome to pnpm-turborepo-boilerplate 👋</h1>
 
 ## What's inside?
 
@@ -7,7 +7,6 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 > ### Apps and Packages
 
 - `web`: a [Next.js](https://nextjs.org/) app.
-- `my-t3`: a [T3 Stack](https://nextjs.org/) app.
 - `ui`: a stub React component library shared throughout the monorepo.
 - `utils`: shared utils throughout the monorepo.
 - `database`: Prisma instence / client used throughout the monorepo.
