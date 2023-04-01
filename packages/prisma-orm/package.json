@@ -1,5 +1,5 @@
 {
-  "name": "@retconned/database",
+  "name": "@retconned/prisma-orm",
   "main": "./index.ts",
   "types": "./index.ts",
   "author": "retconned <retcnned@gmail.com>",

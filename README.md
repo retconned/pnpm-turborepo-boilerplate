@@ -9,7 +9,7 @@ This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes th
 - `web`: a [Next.js](https://nextjs.org/) app.
 - `ui`: a stub React component library shared throughout the monorepo.
 - `utils`: shared utils throughout the monorepo.
-- `database`: Prisma instence / client used throughout the monorepo.
+- `prisma-orm`: Prisma instence / client used throughout the monorepo.
 - `eslint-config-custom`: `eslint` .
 - `tsconfig`: `tsconfig.json`'s used throughout the monorepo.
 

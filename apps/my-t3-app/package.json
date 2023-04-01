@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "postinstall": "prisma generate --schema=../../packages/database/prisma/schema.prisma",
+    "postinstall": "prisma generate --schema=../../packages/prisma-orm/prisma/schema.prisma",
     "lint": "next lint",
     "start": "next start"
   },
@@ -29,7 +29,7 @@
     "@retconned/config": "workspace:*",
     "@retconned/eslint-config-custom": "workspace:*",
     "@retconned/tsconfig": "workspace:*",
-    "@retconned/database": "workspace:*",
+    "@retconned/prisma-orm": "workspace:*",
     "@types/eslint": "^8.21.1",
     "@types/node": "^18.14.0",
     "@types/prettier": "^2.7.2",

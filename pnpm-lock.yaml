@@ -80,12 +80,12 @@ importers:
       '@retconned/config':
         specifier: workspace:*
         version: link:../../packages/config
-      '@retconned/database':
-        specifier: workspace:*
-        version: link:../../packages/database
       '@retconned/eslint-config-custom':
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
+      '@retconned/prisma-orm':
+        specifier: workspace:*
+        version: link:../../packages/prisma-orm
       '@retconned/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -162,12 +162,12 @@ importers:
       '@retconned/config':
         specifier: workspace:*
         version: link:../../packages/config
-      '@retconned/database':
-        specifier: workspace:*
-        version: link:../../packages/database
       '@retconned/eslint-config-custom':
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
+      '@retconned/prisma-orm':
+        specifier: workspace:*
+        version: link:../../packages/prisma-orm
       '@retconned/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -202,22 +202,6 @@ importers:
         specifier: ^0.2.1
         version: 0.2.1(prettier@2.8.3)
 
-  packages/database:
-    dependencies:
-      '@prisma/client':
-        specifier: 4.11.0
-        version: 4.11.0(prisma@4.11.0)
-    devDependencies:
-      '@retconned/eslint-config-custom':
-        specifier: workspace:*
-        version: link:../eslint-config-custom
-      '@retconned/tsconfig':
-        specifier: workspace:*
-        version: link:../tsconfig
-      prisma:
-        specifier: 4.11.0
-        version: 4.11.0
-
   packages/eslint-config-custom:
     dependencies:
       eslint-config-next:
@@ -232,6 +216,22 @@ importers:
       eslint-plugin-react:
         specifier: 7.31.8
         version: 7.31.8(eslint@8.36.0)
+
+  packages/prisma-orm:
+    dependencies:
+      '@prisma/client':
+        specifier: 4.11.0
+        version: 4.11.0(prisma@4.11.0)
+    devDependencies:
+      '@retconned/eslint-config-custom':
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      '@retconned/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      prisma:
+        specifier: 4.11.0
+        version: 4.11.0
 
   packages/tsconfig: {}
 

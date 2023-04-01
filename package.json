@@ -16,7 +16,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "clean": "turbo run clean && rm -rf node_modules",
     "lint:staged": "lint-staged",
-    "db:generate": "pnpm --filter @retconned/database db:generate",
+    "db:generate": "pnpm --filter @retconned/prisma-orm db:generate",
     "db:push": "turbo db:generate db:push",
     "check:prettier:staged": "pretty-quick --staged",
     "check:commit:msg:staged": "commitlint --edit \"$1\""
