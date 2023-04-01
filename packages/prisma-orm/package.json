@@ -1,19 +1,19 @@
 {
-  "name": "@retconned/database",
+  "name": "@retconned/prisma-orm",
   "main": "./index.ts",
   "types": "./index.ts",
   "author": "retconned <retcnned@gmail.com>",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@prisma/client": "latest"
+    "@prisma/client": "4.11.0"
   },
   "scripts": {
     "db:generate": "prisma generate",
     "db:push": "prisma db push --skip-generate"
   },
   "devDependencies": {
-    "prisma": "latest",
+    "prisma": "4.11.0",
     "@retconned/eslint-config-custom": "workspace:*",
     "@retconned/tsconfig": "workspace:*"
   }

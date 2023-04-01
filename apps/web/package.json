@@ -21,7 +21,7 @@
     "@retconned/config": "workspace:*",
     "@retconned/eslint-config-custom": "workspace:*",
     "@retconned/tsconfig": "workspace:*",
-    "@retconned/database": "workspace:*",
+    "@retconned/prisma-orm": "workspace:*",
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
