@@ -9,7 +9,7 @@ module.exports = {
     //* library transpiliation route *//
     "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
     //* if you aren't opt in for src folder structure in your projects, comment the following line & uncomment/add the paths as required *//
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
