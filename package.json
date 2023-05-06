@@ -1,6 +1,6 @@
 {
   "name": "turborepo-base",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "author": "retconned <retcnned@gmail.com>",
   "workspaces": [
@@ -8,25 +8,27 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build --cache-dir=\"./.turbo_cache\"",
-    "dev": "turbo run dev --parallel",
+    "build": "pnpm with-env turbo run build --cache-dir=\"./.turbo_cache\"",
+    "dev": "pnpm with-env turbo run dev --parallel",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "deploy": "turbo run deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "clean": "turbo run clean && rm -rf node_modules",
     "lint:staged": "lint-staged",
-    "db:generate": "pnpm --filter @retconned/database db:generate",
-    "db:push": "turbo db:generate db:push",
+    "prisma:generate": "pnpm with-env --filter @retconned/prisma-orm db:generate",
+    "prisma:push": "pnpm with-env turbo db:generate db:push",
+    "drizzle:push": "pnpm with-env turbo --filter @retconned/drizzle db:push",
     "check:prettier:staged": "pretty-quick --staged",
-    "check:commit:msg:staged": "commitlint --edit \"$1\""
+    "check:commit:msg:staged": "commitlint --edit \"$1\"",
+    "with-env": "dotenv -e .env --"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@retconned/config": "workspace:*",
     "@retconned/eslint-config-custom": "workspace:*",
     "@types/node": "^17.0.12",
-    "dotenv": "^16.0.3",
+    "dotenv-cli": "^7.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "pretty-quick": "^3.1.3",

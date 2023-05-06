@@ -1,19 +1,23 @@
 {
-  "name": "@retconned/database",
+  "name": "@retconned/drizzle",
   "main": "./index.ts",
   "types": "./index.ts",
   "author": "retconned <retcnned@gmail.com>",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@prisma/client": "latest"
+    "mysql2": "^2.3.3"
   },
   "scripts": {
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push --skip-generate"
+    "db:push": "drizzle-kit push:mysql"
   },
   "devDependencies": {
-    "prisma": "latest",
+    "@types/node": "^18.15.5",
+    "dotenv": "^16.0.3",
+    "drizzle-kit": "0.17.1-5df459e",
+    "drizzle-orm": "0.23.2",
+    "typescript": "^5.0.2",
+    "@retconned/config": "workspace:*",
     "@retconned/eslint-config-custom": "workspace:*",
     "@retconned/tsconfig": "workspace:*"
   }
