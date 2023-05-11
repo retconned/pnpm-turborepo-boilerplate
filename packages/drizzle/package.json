@@ -14,11 +14,11 @@
   "devDependencies": {
     "@types/node": "^18.15.5",
     "dotenv": "^16.0.3",
-    "drizzle-kit": "0.17.1-5df459e",
-    "drizzle-orm": "0.23.2",
-    "typescript": "^5.0.2",
+    "drizzle-kit": "0.17.6-76e73f3",
+    "drizzle-orm": "0.25.4",
     "@retconned/config": "workspace:*",
     "@retconned/eslint-config-custom": "workspace:*",
-    "@retconned/tsconfig": "workspace:*"
+    "@retconned/tsconfig": "workspace:*",
+    "typescript": "^5.0.2"
   }
 }
